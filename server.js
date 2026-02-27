@@ -45,7 +45,7 @@ const upload = multer({
 });
 
 // Initialize Gemini API
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "AIzaSyD_wQb5aTPnvR6AlyreABAkx_R_HJ-EXFw");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 const model = genAI.getGenerativeModel({
   model: 'gemini-2.5-flash',
 });
@@ -371,3 +371,4 @@ app.listen(PORT, () => {
   console.log(`   GET /api/domain-skills - Get domain skills`);
   console.log(`   GET /api/health - Health check`);
 });
+
